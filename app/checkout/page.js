@@ -6,14 +6,14 @@ import Link from 'next/link';
 const sampleItems = [
   {
     id: 1,
-    name: 'Luxury Property Blueprint',
+    name: 'Private Property Playbook',
     category: 'Real Estate',
     price: 149,
     quantity: 1,
   },
   {
     id: 2,
-    name: 'Forex Master Signals Pack',
+    name: 'Forex Edge Blueprint',
     category: 'Forex',
     price: 89,
     quantity: 2,
@@ -49,26 +49,29 @@ export default function CheckoutPage() {
         <header className="header">
           <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', gap: '20px' }}>
             <Link href="/" className="logo">
-              <div className="logo-mark">V</div>
+              <div className="logo-mark">G</div>
               <div className="logo-text">
-                <div className="logo-name">Veloura</div>
-                <div className="logo-tag">Market</div>
+                <div className="logo-name">GIOVAVVY</div>
+                <div className="logo-tag">Inc</div>
               </div>
             </Link>
           </div>
         </header>
 
         <main className="container-small" style={{ paddingTop: '60px', paddingBottom: '80px', textAlign: 'center' }}>
-          <div className="card" style={{ maxWidth: '500px', margin: '0 auto', padding: '60px 40px' }}>
+          <div className="card" style={{ maxWidth: '560px', margin: '0 auto', padding: '60px 42px' }}>
             <div style={{ fontSize: '4rem', marginBottom: '20px' }}>✓</div>
-            <h1 style={{ marginBottom: '16px' }}>Order placed successfully!</h1>
+            <h1 style={{ marginBottom: '16px' }}>Your access is ready.</h1>
             <p style={{ color: 'var(--text-muted)', marginBottom: '12px' }}>
-              Thank you, {formData.fullName}! Your order has been received.
+              Thank you, {formData.fullName}. Your premium order has been confirmed.
             </p>
-            <p style={{ color: 'var(--text-muted)', marginBottom: '30px' }}>
-              A confirmation email has been sent to <strong>{formData.email}</strong>
+            <p style={{ color: 'var(--text-muted)', marginBottom: '28px' }}>
+              Your digital collection is now available in your inbox at <strong>{formData.email}</strong>.
             </p>
-            <Link href="/" className="btn btn-primary">Continue shopping</Link>
+            <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <Link href="/" className="btn btn-primary">Explore more</Link>
+              <button className="btn btn-secondary">Download assets</button>
+            </div>
           </div>
         </main>
       </>
@@ -80,26 +83,21 @@ export default function CheckoutPage() {
       <header className="header">
         <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', gap: '20px' }}>
           <Link href="/" className="logo">
-            <div className="logo-mark">V</div>
+            <div className="logo-mark">G</div>
             <div className="logo-text">
-              <div className="logo-name">Veloura</div>
-              <div className="logo-tag">Market</div>
+              <div className="logo-name">GIOVAVVY</div>
+              <div className="logo-tag">Inc</div>
             </div>
           </Link>
           <div style={{ flex: 1 }} />
-          <span style={{ color: 'var(--text-muted)' }}>Step 1 of 2</span>
+          <span style={{ color: 'var(--text-muted)' }}>Private checkout</span>
         </div>
       </header>
 
       <main className="container-small" style={{ paddingTop: '40px', paddingBottom: '80px' }}>
-        <h1 style={{ marginBottom: '40px' }}>Guest checkout</h1>
+        <h1 style={{ marginBottom: '40px' }}>Secure checkout</h1>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1.2fr 0.8fr',
-          gap: '30px',
-        }}>
-          {/* Checkout Form */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '30px' }}>
           <div>
             <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '16px' }}>
               <div>
@@ -223,18 +221,12 @@ export default function CheckoutPage() {
                 </div>
               </div>
 
-              <button type="submit" className="btn btn-primary" style={{
-                width: '100%',
-                padding: '16px',
-                fontSize: '1rem',
-                marginTop: '24px',
-              }}>
+              <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '16px', fontSize: '1rem', marginTop: '24px' }}>
                 Complete payment → ${subtotal}
               </button>
             </form>
           </div>
 
-          {/* Order Summary */}
           <div className="card">
             <h3 style={{ marginBottom: '24px' }}>Order summary</h3>
             <div style={{ display: 'grid', gap: '12px', marginBottom: '24px' }}>
@@ -245,14 +237,7 @@ export default function CheckoutPage() {
                 </div>
               ))}
             </div>
-            <div style={{
-              borderTop: '1px solid var(--card-border)',
-              paddingTop: '16px',
-              display: 'flex',
-              justifyContent: 'space-between',
-              fontSize: '1.2rem',
-              fontWeight: 700,
-            }}>
+            <div style={{ borderTop: '1px solid var(--card-border)', paddingTop: '16px', display: 'flex', justifyContent: 'space-between', fontSize: '1.2rem', fontWeight: 700 }}>
               <span>Total</span>
               <span>${subtotal}</span>
             </div>
