@@ -1,164 +1,153 @@
 import Link from 'next/link';
 
 const categories = [
-  { icon: '✨', name: 'Digital Articles', desc: 'In-depth guides and premium knowledge' },
-  { icon: '▶', name: 'Video Learning', desc: 'Expert tutorials and masterclasses' },
-  { icon: '☕', name: 'Recipes', desc: 'Curated meal plans and cooking guides' },
-  { icon: '₿', name: 'Forex', desc: 'Market strategies and trading insights' },
-  { icon: '🏠', name: 'Real Estate', desc: 'Property investment guides' },
-  { icon: '♦', name: 'Wellness', desc: 'Lifestyle and mindfulness resources' },
+  { icon: '✦', name: 'Market Intel', desc: 'Sharp strategies and refined financial insight for high-value decisions.' },
+  { icon: '▣', name: 'Video Mastery', desc: 'Elevated teaching designed for fast, focused growth and clarity.' },
+  { icon: '✧', name: 'Private Recipes', desc: 'Curated culinary experiences for effortless luxury at home.' },
+  { icon: '◌', name: 'Forex Edge', desc: 'Measured, informed market frameworks for confident execution.' },
+  { icon: '⌂', name: 'Property Playbooks', desc: 'Precise property intel for smarter, higher-conviction buying.' },
+  { icon: '◎', name: 'Wellness Rituals', desc: 'Intentional lifestyle tools that support balance and depth.' },
 ];
 
 const products = [
   {
     id: 1,
-    name: 'Luxury Property Blueprint',
+    name: 'Private Property Playbook',
     category: 'Real Estate',
     price: 149,
-    badge: 'Best Seller',
-    desc: 'Complete guide to evaluating high-value real estate opportunities.',
+    badge: 'Collector Pick',
+    desc: 'A premium guide to evaluating high-value property opportunities with precision.',
+    tone: 'linear-gradient(135deg, rgba(213,177,114,0.2), rgba(255,255,255,0.04))',
+    glyph: '⌂',
   },
   {
     id: 2,
-    name: 'Forex Master Signals Pack',
+    name: 'Forex Edge Blueprint',
     category: 'Forex',
     price: 89,
     badge: 'Trending',
-    desc: 'Smart market strategy resources and execution frameworks.',
+    desc: 'Smart frameworks for mastering market timing and strategy execution.',
+    tone: 'linear-gradient(135deg, rgba(122,136,255,0.18), rgba(255,255,255,0.04))',
+    glyph: '◌',
   },
   {
     id: 3,
-    name: "Chef's 7-Day Recipe Vault",
+    name: 'Maison Recipe Vault',
     category: 'Recipes',
     price: 64,
     badge: 'New',
-    desc: 'Chef-level meals, prep guides, and easy gourmet recipes.',
+    desc: 'Polished, chef-inspired recipes built for elevated daily living.',
+    tone: 'linear-gradient(135deg, rgba(213,177,114,0.12), rgba(255,255,255,0.04))',
+    glyph: '✧',
   },
   {
     id: 4,
-    name: 'Business Growth Journal',
+    name: 'Brand Growth Journal',
     category: 'Articles',
     price: 49,
-    badge: "Editor's Pick",
-    desc: 'A practical journal for creators, founders, and strategists.',
+    badge: 'Editor’s Pick',
+    desc: 'A practical system for founders and creators building intentional growth.',
+    tone: 'linear-gradient(135deg, rgba(162,129,255,0.18), rgba(255,255,255,0.04))',
+    glyph: '✦',
   },
   {
     id: 5,
-    name: 'Digital Marketing Mastery',
+    name: 'Digital Growth Framework',
     category: 'Articles',
     price: 79,
     badge: 'Popular',
-    desc: 'Complete guide to modern digital marketing strategies.',
+    desc: 'A premium roadmap for modern strategy, content, and conversion systems.',
+    tone: 'linear-gradient(135deg, rgba(120,226,193,0.14), rgba(255,255,255,0.04))',
+    glyph: '▣',
   },
   {
     id: 6,
-    name: 'Video Production Essentials',
+    name: 'Studio Production Kit',
     category: 'Video Learning',
     price: 99,
     badge: 'Best Value',
-    desc: 'Learn professional video production from the ground up.',
+    desc: 'Learn to create polished, premium content with a clearer creative system.',
+    tone: 'linear-gradient(135deg, rgba(255,160,120,0.14), rgba(255,255,255,0.04))',
+    glyph: '▶',
   },
 ];
 
 const features = [
-  {
-    title: 'Curated excellence',
-    desc: 'Every item is reviewed for quality, trust, and relevance.',
-  },
-  {
-    title: 'Secure checkout',
-    desc: 'Fast and safe transactions designed for effortless buying.',
-  },
-  {
-    title: 'Global access',
-    desc: 'Access premium digital products from anywhere in the world.',
-  },
+  { title: 'Curated excellence', desc: 'Each release is selected for quality, trust, and true value.' },
+  { title: 'Private checkout', desc: 'A clean, secure flow made for effortless purchases and instant access.' },
+  { title: 'Worldwide access', desc: 'Luxury digital knowledge for buyers everywhere, without friction.' },
 ];
 
 const testimonials = [
-  {
-    quote: 'The experience feels premium from start to finish. Clean, simple, and genuinely inspiring.',
-    author: 'Aisha M.',
-    role: 'Creative Founder',
-  },
-  {
-    quote: 'I found exactly what I needed in minutes. The catalog feels carefully curated, not cluttered.',
-    author: 'Daniel K.',
-    role: 'Investor',
-  },
-  {
-    quote: 'The design and trust signals make shopping feel seamless and elevated.',
-    author: 'Nia T.',
-    role: 'Lifestyle Brand',
-  },
+  { quote: 'It feels premium from the first click to the final download. That kind of polish is rare.', author: 'Aisha M.', role: 'Creative Founder' },
+  { quote: 'The experience feels thoughtful, elevated, and genuinely made for people who value quality.', author: 'Daniel K.', role: 'Investor' },
+  { quote: 'Everything feels curated. I found exactly what I needed without the usual clutter.', author: 'Nia T.', role: 'Lifestyle Brand' },
 ];
 
 export default function HomePage() {
   return (
     <>
-      {/* Header */}
       <header className="header">
         <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', gap: '20px' }}>
           <div className="logo">
-            <div className="logo-mark">V</div>
+            <div className="logo-mark">G</div>
             <div className="logo-text">
-              <div className="logo-name">Veloura</div>
-              <div className="logo-tag">Market</div>
+              <div className="logo-name">GIOVAVVY</div>
+              <div className="logo-tag">Inc</div>
             </div>
           </div>
 
           <nav className="nav">
-            <a href="#categories">Categories</a>
+            <a href="#categories">Collections</a>
             <a href="#featured">Featured</a>
-            <a href="#stories">Stories</a>
+            <a href="#stories">Journal</a>
             <a href="#about">About</a>
           </nav>
 
           <div className="header-actions">
-            <button className="btn btn-ghost">Log in</button>
-            <Link href="/cart" className="btn btn-primary">Cart</Link>
+            <button className="btn btn-ghost">Private access</button>
+            <Link href="/checkout" className="btn btn-primary">Cart</Link>
           </div>
         </div>
       </header>
 
-      {/* Hero Section */}
       <section className="hero">
         <div className="container" style={{ gridColumn: '1 / -1' }}>
           <div className="hero" style={{ gridColumn: 'unset' }}>
             <div className="hero-copy">
-              <span className="eyebrow">Premium discovery</span>
-              <h1>Buy the things that shape your next chapter.</h1>
+              <span className="eyebrow">Luxury digital marketplace</span>
+              <h1>Elevated essentials for the life you’re building.</h1>
               <p>
-                Discover boutique articles, video lessons, recipe experiences, forex guidance,
-                real-estate resources, and wellness tools—all in one elevated marketplace.
+                Discover premium articles, masterclasses, financial insight, property strategies,
+                and lifestyle tools—carefully selected for a sharper, richer next chapter.
               </p>
 
               <div className="hero-actions">
-                <Link href="#featured" className="btn btn-primary btn-lg">Explore catalog</Link>
-                <a href="#featured" className="btn btn-secondary btn-lg">View best sellers</a>
+                <Link href="#featured" className="btn btn-primary btn-lg">Explore collection</Link>
+                <a href="#featured" className="btn btn-secondary btn-lg">View bestsellers</a>
               </div>
 
               <div className="hero-stats">
                 <div className="stat">
                   <div className="stat-value">12k+</div>
-                  <div className="stat-label">happy shoppers</div>
+                  <div className="stat-label">private clients</div>
                 </div>
                 <div className="stat">
                   <div className="stat-value">240+</div>
-                  <div className="stat-label">curated products</div>
+                  <div className="stat-label">curated assets</div>
                 </div>
                 <div className="stat">
                   <div className="stat-value">4.9/5</div>
-                  <div className="stat-label">average rating</div>
+                  <div className="stat-label">client rating</div>
                 </div>
               </div>
             </div>
 
             <div className="hero-visual">
               <div className="hero-card">
-                <div className="hero-card-tag">✨ Top pick</div>
+                <div className="hero-card-tag">✦ Curator’s pick</div>
                 <h3>Property Growth Kit</h3>
-                <p>Actionable insights for smart property investments and market opportunities.</p>
+                <p>Actionable guidance for sharper property decisions and high-conviction investments.</p>
                 <div className="hero-card-action">
                   <div className="hero-card-price">$129</div>
                   <button className="hero-card-btn">Add to cart</button>
@@ -169,12 +158,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Categories Section */}
-      <section className="section">
+      <section className="section" id="categories">
         <div className="container">
           <div className="section-title">
-            <span className="eyebrow">Shop by category</span>
-            <h2>Curated just for your next move.</h2>
+            <span className="eyebrow">Shop by focus</span>
+            <h2>Thoughtful picks for your next move.</h2>
           </div>
 
           <div className="grid grid-3">
@@ -190,19 +178,30 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Products */}
       <section className="section" id="featured">
         <div className="container">
           <div className="section-title">
-            <span className="eyebrow">Featured picks</span>
+            <span className="eyebrow">Featured collection</span>
             <h2>Most loved this week.</h2>
           </div>
 
           <div className="grid grid-4">
             {products.map((prod) => (
               <div key={prod.id} className="card">
-                <div style={{ height: '200px', borderRadius: '18px', background: `linear-gradient(135deg, rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.2), rgba(20, 28, 36, 0.9))`, marginBottom: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)' }}>
-                  {prod.icon || '🎁'}
+                <div
+                  style={{
+                    height: '200px',
+                    borderRadius: '18px',
+                    background: prod.tone,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '3.2rem',
+                    marginBottom: '16px',
+                    border: '1px solid rgba(255,255,255,0.08)',
+                  }}
+                >
+                  {prod.glyph}
                 </div>
                 <span className="badge badge-gold" style={{ marginBottom: '12px' }}>{prod.badge}</span>
                 <span className="card-category">{prod.category}</span>
@@ -218,12 +217,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="section" id="about">
         <div className="container">
-          <div className="section-title" style={{ maxWidth: '600px', marginBottom: '60px' }}>
-            <span className="eyebrow">Why Veloura</span>
-            <h2>Built for modern shopping, without the clutter.</h2>
+          <div className="section-title" style={{ maxWidth: '640px', marginBottom: '60px' }}>
+            <span className="eyebrow">Why GIOVAVVY</span>
+            <h2>Luxury without the noise.</h2>
           </div>
 
           <div className="grid grid-3">
@@ -238,19 +236,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
       <section className="section" id="stories">
         <div className="container">
           <div className="section-title" style={{ marginBottom: '48px' }}>
-            <span className="eyebrow">Customer stories</span>
-            <h2>People shop with clarity and confidence.</h2>
+            <span className="eyebrow">Client notes</span>
+            <h2>People come for the value and stay for the experience.</h2>
           </div>
 
           <div className="grid grid-3">
             {testimonials.map((item, i) => (
               <div key={i} className="testimonial-card">
                 <div className="testimonial-stars">★★★★★</div>
-                <p>"{item.quote}"</p>
+                <p>“{item.quote}”</p>
                 <div className="testimonial-author">
                   <div className="testimonial-name">{item.author}</div>
                   <div className="testimonial-role">{item.role}</div>
@@ -261,18 +258,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Newsletter */}
       <section className="section">
         <div className="container-small">
-          <div style={{
-            background: 'linear-gradient(135deg, rgba(214, 176, 109, 0.1), rgba(121, 215, 212, 0.08))',
-            border: '1px solid var(--card-border)',
-            borderRadius: '28px',
-            padding: '40px',
-            textAlign: 'center',
-          }}>
-            <span className="eyebrow">Stay inspired</span>
-            <h2 style={{ marginBottom: '24px' }}>Get fresh drops and curated finds in your inbox.</h2>
+          <div
+            style={{
+              background: 'linear-gradient(135deg, rgba(213, 177, 114, 0.12), rgba(255, 255, 255, 0.02))',
+              border: '1px solid var(--card-border)',
+              borderRadius: '28px',
+              padding: '40px',
+              textAlign: 'center',
+            }}
+          >
+            <span className="eyebrow">Private updates</span>
+            <h2 style={{ marginBottom: '24px' }}>Receive the next curated drop before everyone else.</h2>
             <form style={{ display: 'flex', gap: '12px', maxWidth: '500px', margin: '0 auto' }}>
               <input
                 type="email"
@@ -286,21 +284,20 @@ export default function HomePage() {
                   color: 'var(--text)',
                 }}
               />
-              <button type="submit" className="btn btn-primary">Subscribe</button>
+              <button type="submit" className="btn btn-primary">Join list</button>
             </form>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="footer">
         <div className="container">
           <div className="footer-content">
             <div className="logo">
-              <div className="logo-mark">V</div>
+              <div className="logo-mark">G</div>
               <div className="logo-text">
-                <div className="logo-name">Veloura</div>
-                <div className="logo-tag">Market</div>
+                <div className="logo-name">GIOVAVVY</div>
+                <div className="logo-tag">Inc</div>
               </div>
             </div>
 
@@ -311,9 +308,7 @@ export default function HomePage() {
               <a href="#">Contact</a>
             </div>
 
-            <div className="footer-copyright">
-              © 2024 Veloura Market. All rights reserved.
-            </div>
+            <div className="footer-copyright">© 2024 GIOVAVVY Inc. All rights reserved.</div>
           </div>
         </div>
       </footer>
